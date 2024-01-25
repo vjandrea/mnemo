@@ -1,0 +1,26 @@
+{
+    "name": "ealore/mnemo",
+    "version": "1.0.0",
+    "description": "CLI tool to generate mnemonic passwords",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ealore\\Mnemo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrea Bergamasco",
+            "email": "andrea@bergamasco.me"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "symfony/console": "^5.4",
+        "symfony/var-dumper": "^6.4"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.4"
+    }
+}

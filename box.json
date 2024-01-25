@@ -1,0 +1,4 @@
+{
+    "main": "mnemo.php",
+    "output": "build/mnemo.phar"
+}
