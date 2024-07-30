@@ -22,7 +22,9 @@ class MnemoCommand extends Command
     {
         $this
             ->setHelp("The generate command outputs a list of {$this->limit} passwords")
-            ->addOption('no-dashes', 'd', InputOption::VALUE_NONE, 'Remove dashes');
+            ->addOption('no-dashes', 'd', InputOption::VALUE_NONE, 'Remove dashes')
+            ->addOption('scrambled', 's', InputOption::VALUE_NONE, 'Scrambled')
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -30,8 +32,13 @@ class MnemoCommand extends Command
         $this->io = new SymfonyStyle($input, $output);
 
         $noDashes = $input->getOption('no-dashes');
+        $scrambled = $input->getOption('scrambled');
 
         foreach ($this->generatePasswords($this->limit, $noDashes) as $password) {
+            if ($scrambled) {
+                $password = $this->scramble($password);
+            }
+
             $this->io->text($password);
         }
 
@@ -80,4 +87,13 @@ class MnemoCommand extends Command
 
         return implode($separator, $words);
     }
+
+
+    private function scramble(string $password): string {
+        $letters = preg_split('//', $password);
+        shuffle($letters);
+        reset($letters);
+        return implode($letters);
+    }
+
 }

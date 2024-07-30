@@ -21,8 +21,9 @@ On Windows : move to a suitable folder and add it to your PATH.
 
 ## Usage
 ```sh
-$ mnemo                       # generates 5 random passwords
-$ mnemo -d  (or --no-dashes)  # generates 5 random passwords without dashes
+$ mnemo                       # generates 5 random mnemonic passwords
+$ mnemo -d  (or --no-dashes)  # generates 5 random mnemonic passwords without dashes
+$ mnemo -s  (or --scrambled)   # generates 5 random scrambled passwords
 ```
 
 ## Development
@@ -31,4 +32,5 @@ PRs welcome !
 
 ## Releases
 
+1.1.0 - Updated dependencies, added `--scrambled`
 1.0.0 - First release
