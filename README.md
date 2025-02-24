@@ -21,9 +21,10 @@ On Windows : move to a suitable folder and add it to your PATH.
 
 ## Usage
 ```sh
-$ mnemo                       # generates 5 random mnemonic passwords
-$ mnemo -d  (or --no-dashes)  # generates 5 random mnemonic passwords without dashes
-$ mnemo -s  (or --scrambled)   # generates 5 random scrambled passwords
+$ mnemo                            # generates 5 random mnemonic passwords
+$ mnemo -d  (or --no-dashes)       # generates 5 random mnemonic passwords without dashes
+$ mnemo -s  (or --scrambled)       # generates 5 random scrambled passwords
+$ mnemo -m 16 (or --max-length 16) # generates 5 passwords with maximum length of 16 characters
 ```
 
 ## Development
@@ -32,5 +33,6 @@ PRs welcome !
 
 ## Releases
 
+1.2.0 - Updated dependencies, added `--max-length`
 1.1.0 - Updated dependencies, added `--scrambled`
 1.0.0 - First release
