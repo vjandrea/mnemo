@@ -24,7 +24,7 @@ class MnemoCommand extends Command
             ->setHelp("The generate command outputs a list of {$this->limit} passwords")
             ->addOption('no-dashes', 'd', InputOption::VALUE_NONE, 'Remove dashes')
             ->addOption('scrambled', 's', InputOption::VALUE_NONE, 'Scrambled')
-            ->addOption('max-length', 'm', InputOption::VALUE_NONE, 'Max length')
+            ->addOption('max-length', 'l', InputOption::VALUE_REQUIRED, 'Max length')
         ;
     }
 
